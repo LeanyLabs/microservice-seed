@@ -10,5 +10,6 @@ export async function initSequelize() {
     logger.info('DB connection has been established successfully.');
   } catch (err) {
     logger.error('Failed to establish DB conection', err);
+    throw err;
   }
 }
